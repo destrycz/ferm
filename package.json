@@ -1,0 +1,22 @@
+{
+  "name": "fermentation_project",
+  "version": "1.0.0",
+  "description": "fermentation process measurement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "fermentation",
+    "rpi",
+    "esp32"
+  ],
+  "author": "Daniel Volek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "socket.io": "^4.8.1"
+  }
+}
