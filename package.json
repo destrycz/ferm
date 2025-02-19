@@ -16,7 +16,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
+    "i2c-bus": "^5.2.3",
+    "lcd": "^3.1.1",
     "nodemon": "^3.1.9",
+    "raspberrypi-liquid-crystal": "^1.20.0",
+    "request-promise": "^4.2.6",
     "socket.io": "^4.8.1"
   }
 }
