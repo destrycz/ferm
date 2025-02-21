@@ -6,6 +6,6 @@ services:
       - 3000:8000
     restart: unless-stopped
     volumes:
-      - ./test/sensor_data.csv:sensor_data.csv
+      - ./test/sensor_data.csv:/sensor_data.csv
     privileged: true
     
