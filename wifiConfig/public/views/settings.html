@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WiFi Setup</title>
+</head>
+<body>
+  <h1>Configure WiFi</h1>
+  <form method="POST" action="/wifi-config">
+    <label for="ssid">WiFi SSID:</label><br>
+    <input type="text" id="ssid" name="ssid" required><br><br>
+
+    <label for="password">WiFi Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Connect">
+  </form>
+</body>
+</html>

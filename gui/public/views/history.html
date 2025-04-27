@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../styles/style_general.css">
+  <link rel="stylesheet" href="../styles/history/style_history.css">
+  <title>Fermentation History</title>
+
+  <style>
+    /* Include the updated CSS styles from above here */
+  </style>
+
+</head>
+<body>
+  <div class="navbar">
+    <img id="logo" src="../assets/images/fai-cs.svg">
+    <p id="measurementBtn">
+      <img title="dbico" class="icon" src="../assets/icons/measurement.svg"> Měření
+    </p>
+    <p id="histBtn" class="active">
+      <img title="dbico" class="icon" src="../assets/icons/db.svg"> Historie
+    </p>
+  </div>
+
+  <div class="content">
+    <!-- Removed the 'Fetch Measurements' button -->
+
+    <!-- Table to display history measurements -->
+    <table id="historyTable">
+      <thead>
+        <tr>
+          
+          <th>Název</th>
+          <th>Datum spuštění</th>
+          <th>Datum ukončení</th>
+          <th>Popis</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data rows will be added dynamically here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../scripts/history/event_listeners_history.js"></script>
+  <script src="../scripts/general/event_listeners_general.js"></script>
+ 
+</body>
+</html>

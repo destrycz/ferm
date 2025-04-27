@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../styles/style_general.css">
+    <link rel="stylesheet" href="../styles/measurement/style_measurement_classes.css">
+    <!-- <link rel="stylesheet" href="../styles/style_index_ids.css"> -->
+
+    <title>Fermentation GUI</title>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <img id="logo" src="../assets/images/fai-cs.svg">
+        <p id="measurementBtn" class="active">
+            <img title="dbico" src="../assets/icons/measurement.svg">
+            Měření
+        </p>
+        <p id="histBtn">
+            <img title="dbico" src="../assets/icons/db.svg">
+            Historie
+        </p>
+        <p id="settingsBtn">
+            <img title="dbico" src="../assets/icons/settings.svg">
+            Nastavení
+        </p>
+    </div>
+    <div class="main">
+        <div class="content">
+
+            <div class="container">
+                <h2>Hodnoty senzorů</h2>
+                <div class="sensor-values">
+                    <div class="sensor" id="sensor1">CH1: --</div>
+                    <div class="sensor" id="sensor2">CH2: --</div>
+                    <div class="sensor" id="sensor3">CH3: --</div>
+                    <div class="sensor" id="sensor4">CH4: --</div>
+                    <div class="sensor" id="sensor5">CH5: --</div>
+                    <div class="sensor" id="sensor6">CH6: --</div>
+                    <div class="sensor" id="sensor7">CH7: --</div>
+                    <div class="sensor" id="sensor8">CH8: --</div>
+                    <div class="sensor" id="sensor9">CH9: --</div>
+                    <div class="sensor" id="sensor10">CH10: --</div>
+                    <div class="sensor" id="sensor11">CH11: --</div>
+                    <div class="sensor" id="sensor12">CH12: --</div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+            <div class="container">
+
+
+                <form id="measurementForm">
+                    <h2>Vytvořit měření</h2>
+                    <label for="measurementTitle">Název měření:</label><br>
+                    <input type="text" id="measurementTitle" name="measurementTitle" required><br><br>
+                    <label for="description" id="descLabel">Poznámky:</label><br>
+                    <div id="description">
+                        
+                        <textarea id="descText" spellcheck="false" style="width: 400px; height: 300px;"></textarea>
+                    </div>
+                    <button type="button" id="measTitleBtn">Spustit měření</button>
+                </form>
+                <div id=currMeasurementDetails class="inactive">
+                    <div class="items">
+                        <h2 id="measurementName"></h2>
+                        <object class="grafana-iframe" id="grafanaiframe"
+                        data="http://192.168.0.105:3000/d-solo/cef3prnyp9qm8a/new-dashboard?orgId=1&refresh=10s&from=now-24h&to=now&timezone=Europe/London&var-measurementID=262&panelId=1&__feature.dashboardSceneSolo" width="800" height="400" frameborder="0"></object>
+                        <div class="buttonList">
+                            <button class="timerangebtn" id="1hframe">1h</button>
+                            <button class="timerangebtn" id="4hframe">4h</button>
+                            <button class="timerangebtn" id="12hframe">12h</button>
+                            <button class="timerangebtn" id="1dframe">1d</button>
+                            <button class="timerangebtn" id="3dframe">3d</button>
+                            <button class="timerangebtn" id="1wframe">1t</button>
+                            <button class="timerangebtn" id="1mframe">1m</button>
+                        </div>
+                        <div class="buttonList">
+                            <button type="button" id="stopMeasurementBtn">Ukončit měření</button>
+                            <button id="grafanaBtn">Grafana</button>
+                            <button id="pgadminBtn">PG admin</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</body>
+<script src="../scripts/general/event_listeners_general.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="../scripts/measurement/event_listeners_measurement.js"></script>
+
+<script>
+    // function updateSensorValues() {
+    //     for (let i = 1; i <= 12; i++) {
+    //         document.getElementById(`sensor${i}`).innerText = `CH ${i}: ${Math.random().toFixed(2)}`;
+    //     }
+    // }
+
+    // setInterval(updateSensorValues, 1000); // Update values every second
+</script>
+
+</html>

@@ -1,0 +1,16 @@
+services:
+  node-gui:
+    build: .
+    image: node_gui
+    container_name: node_gui
+    restart: unless-stopped
+    ports:
+      - 4000:4000
+    privileged: true
+    networks:
+      - containerNetwork 
+    volumes:
+      - /etc/wpa_supplicant:/etc/wpa_supplicant:rw
+networks:
+  containerNetwork:
+    external: true

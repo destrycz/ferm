@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    
+}
+
+.navbar {
+    
+    height: 5vh;
+    width: 100vw;
+   
+    
+  
+    
+    background-color: #c4b9bb;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+
+
+
+  .navbar p:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  p {
+    color: #000000;
+    font-size: 1em;
+    font-stretch: wider;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+  }

@@ -1,0 +1,20 @@
+services:
+  batch-insert:
+    image: data_handling
+    container_name: data-handling
+    restart: unless-stopped
+    privileged: true
+    networks:
+      - containerNetwork
+        
+
+    environment:
+      - BATCH_COUNT=10
+      - DB_HOST=timescaledb
+      - DB_NAME=timescaledb
+      - DB_USER=timescaledb
+      - DB_PORT=5432
+      - DB_PWD=password
+networks:
+  containerNetwork:
+    external: true

@@ -1,0 +1,10 @@
+FROM debian:bookworm-slim
+RUN apt-get update && \
+    apt-get install -y nodejs npm wireless-tools network-manager
+WORKDIR /app
+COPY package*.json ./
+
+    RUN npm install
+COPY . .
+EXPOSE 4001
+CMD ["node","server.js"]

@@ -1,0 +1,15 @@
+services:
+  node-wifi-config:
+    build: .
+    image: wifi_config
+    container_name: node_wifi
+    restart: unless-stopped
+    ports:
+      - 4001:4001
+    privileged: true
+    network_mode: "host" 
+    
+    volumes:
+      - /etc/NetworkManager/:/etc/NetworkManager/:rw
+      - /var/run/dbus:/var/run/dbus
+     

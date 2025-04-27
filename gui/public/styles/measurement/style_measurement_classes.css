@@ -1,0 +1,60 @@
+
+
+.sensor-values {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sensor {
+    padding: 10px;
+    background: rgba(243, 240, 70, 0.2);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+button {
+    width:160px;
+    height:40px;
+
+    background-color: rgb(236, 219, 63);  /* Deep blue */
+    color: rgb(0, 0, 0);  /* Text color */
+    font-size: 16px;  /* Adjust text size */
+    padding: 12px 5px;  /* Padding for button */
+    border: none;  /* Remove border */
+    border-radius: 8px;  /* Rounded corners */
+    cursor: pointer;  /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+}
+
+button:hover {
+    background-color: rgb(231, 196, 40);  /* Darker blue on hover */
+    transform: translateY(1px);  /* Slight lift on hover */
+}
+
+
+
+button:focus {
+    outline: none;  /* Remove default focus outline */
+    box-shadow: 0 0 0 4px rgba(238, 182, 27, 0.6);  /* Add a focus ring for accessibility */
+}
+
+.buttonList{
+    display:flex;
+    flex-direction: row;
+    gap:2rem;
+}
+
+.timerangebtn{
+    width:40px;
+   
+}
+
+.items{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
